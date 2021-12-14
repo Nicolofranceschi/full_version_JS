@@ -45,8 +45,8 @@ export default function ComponentHero() {
                   color: isLight ? 'text.secondary' : 'common.white'
                 }}
               >
-                La nostra raccolta di materiale tecnico
-                <br /> semlice da consulltare e scaricare
+                La nostra raccolta di certificazioni, attestati e attrezzature
+                <br /> semplici da consulltare e scaricare
               </Typography>
             </motion.div>
           </div>

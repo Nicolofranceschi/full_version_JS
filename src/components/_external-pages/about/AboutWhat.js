@@ -75,18 +75,29 @@ export default function AboutWhat() {
                 <Grid item xs={6}>
                   <MotionInView variants={varFadeInUp}>
                     <Box
-                      component="img"
-                      src="/static/about/what-1.jpg"
                       sx={{
+                        mb: 10,
+                        position: 'relative',
                         borderRadius: 2,
-                        boxShadow: shadow
+                        overflow: 'hidden'
                       }}
-                    />
+                    >
+                      <img src="/static/about/what-1.jpg" alt="about-vision" />
+                    </Box>
                   </MotionInView>
                 </Grid>
                 <Grid item xs={6}>
                   <MotionInView variants={varFadeInUp}>
-                    <Box component="img" src="/static/about/what-2.jpg" sx={{ borderRadius: 2 }} />
+                    <Box
+                      sx={{
+                        mb: 10,
+                        position: 'relative',
+                        borderRadius: 2,
+                        overflow: 'hidden'
+                      }}
+                    >
+                      <img src="/static/about/what-2.jpg" alt="about-vision" />
+                    </Box>
                   </MotionInView>
                 </Grid>
               </Grid>

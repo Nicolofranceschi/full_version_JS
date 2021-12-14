@@ -7,7 +7,7 @@ import arrowIosForwardFill from '@iconify/icons-eva/arrow-ios-forward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 // material
 import { alpha, styled } from '@mui/material/styles';
-import { Box, List, Link, Drawer, Collapse, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
+import { Box, List, Link, Drawer, Collapse, ListItemText, ListItemIcon, ListItemButton, Button } from '@mui/material';
 // components
 import Logo from '../../components/Logo';
 import NavSection from '../../components/NavSection';
@@ -191,6 +191,14 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
             {navConfig.map((link) => (
               <MenuMobileItem key={link.title} item={link} isOpen={open} onOpen={handleOpen} />
             ))}
+            <Button
+              href="https://workingbotgfstrade.vercel.app/"
+              target="_blank"
+              sx={{ marginLeft: 2.5, marginTop: 1 }}
+              variant="contained"
+            >
+              WORKINGBOT
+            </Button>
           </List>
         </Scrollbar>
       </Drawer>

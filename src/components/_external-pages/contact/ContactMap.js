@@ -1,97 +1,19 @@
-import MapGL from 'react-map-gl';
+import { Map, Marker } from '@commodityvectors/react-mapbox-gl';
 import { useState } from 'react';
-import { Icon } from '@iconify/react';
-import phoneFill from '@iconify/icons-eva/phone-fill';
-// material
-import { useTheme, styled } from '@mui/material/styles';
-import { Box, Typography } from '@mui/material';
-//
-import { MapControlPopup, MapControlMarker, MapControlScale, MapControlNavigation } from '../../map';
-import { mapConfig } from '../../../config';
-import { varFadeIn, MotionInView } from '../../animate';
-
-// ----------------------------------------------------------------------
-
-export const MOCK_ADDRESS = [
-  {
-    latlng: [45.465454, 9.186516],
-    address: 'Via Talete, 31, 20861 Zona Industriale MB',
-    phoneNumber: '039 690 8263'
-  }
-];
-
-const RootStyle = styled('div')(({ theme }) => ({
-  zIndex: 0,
-  height: 560,
-  overflow: 'hidden',
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  '& .mapboxgl-ctrl-logo, .mapboxgl-ctrl-bottom-right': {
-    display: 'none'
-  }
-}));
-
-// ----------------------------------------------------------------------
+import { Button } from '@mui/material';
+import { varFadeInUp, MotionInView } from '../../animate';
 
 export default function ContactMap() {
-  const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
-  const [tooltip, setTooltip] = useState(null);
-  const [viewport, setViewport] = useState({
-    latitude: 45.465454,
-    longitude: 9.186516,
-    zoom: 15
-  });
-
   return (
-    <MotionInView variants={varFadeIn}>
-      <RootStyle>
-        <MapGL
-          {...viewport}
-          onViewportChange={setViewport}
-          mapStyle={`mapbox://styles/mapbox/${isLight ? 'light' : 'dark'}-v10`}
-          mapboxApiAccessToken="pk.eyJ1Ijoibmljb2xvZnJhbmNlc2NoaSIsImEiOiJja3VtcWRsejEwMWViMnZxcnZzZ3Y5anN2In0.aHYcz6LHC6dIonzxmrFpew"
-          width="100%"
-          height="100%"
-        >
-          <MapControlScale />
-          <MapControlNavigation />
-
-          {MOCK_ADDRESS.map((country) => (
-            <MapControlMarker
-              key={country.latlng}
-              latitude={country.latlng[0]}
-              longitude={country.latlng[1]}
-              onClick={() => setTooltip(country)}
-            />
-          ))}
-
-          {tooltip && (
-            <MapControlPopup
-              longitude={tooltip.latlng[1]}
-              latitude={tooltip.latlng[0]}
-              onClose={() => setTooltip(null)}
-              sx={{
-                '& .mapboxgl-popup-content': { bgcolor: 'common.white' },
-                '&.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip': { borderTopColor: '#FFF' },
-                '&.mapboxgl-popup-anchor-top .mapboxgl-popup-tip': { borderBottomColor: '#FFF' }
-              }}
-            >
-              <Typography variant="subtitle2" sx={{ mb: 0.5 }}>
-                GF Strade
-              </Typography>
-              <Typography component="p" variant="caption">
-                {tooltip.address}
-              </Typography>
-
-              <Typography component="p" variant="caption" sx={{ mt: 1, display: 'flex', alignItems: 'center' }}>
-                <Box component={Icon} icon={phoneFill} sx={{ mr: 0.5, width: 14, height: 14 }} />
-                {tooltip.phoneNumber}
-              </Typography>
-            </MapControlPopup>
-          )}
-        </MapGL>
-      </RootStyle>
+    <MotionInView sx={{ height: '100%', minHeight: '600px' }} variants={varFadeInUp}>
+      <iframe
+        title="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.3962596683505!2d9.319641715821932!3d45.562469434901566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786b74e0d934e83%3A0x3127b736ede782d3!2sGf%20Strade%20Srl!5e0!3m2!1sit!2sit!4v1634305044067!5m2!1sit!2sit"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        loading="lazy"
+      />
     </MotionInView>
   );
 }

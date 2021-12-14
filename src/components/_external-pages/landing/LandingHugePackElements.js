@@ -94,8 +94,7 @@ export default function LandingHugePackElements() {
 
               <MotionInView variants={varFadeInUp}>
                 <Typography variant="h2" sx={{ mb: 3 }}>
-                  Tanti <br />
-                  strumenti
+                  Attrezzature <br />e veicoli speciali
                 </Typography>
               </MotionInView>
 
@@ -106,7 +105,7 @@ export default function LandingHugePackElements() {
                     color: isLight ? 'text.secondary' : 'common.white'
                   }}
                 >
-                  Siamo forniti di strumenti per far risplendere le strade italiane !
+                  per interventi di riqualificazione infrastrutturale , movimento terra , opere edili .
                 </Typography>
               </MotionInView>
 

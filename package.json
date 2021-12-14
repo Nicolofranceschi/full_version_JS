@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.18.0",
+    "@commodityvectors/react-mapbox-gl": "^2.0.3",
     "@emotion/cache": "^11.4.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -109,6 +110,7 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-intersection-observer": "^8.32.1",
     "react-map-gl": "^6.1.17",
+    "react-mapbox-gl": "^5.1.1",
     "react-markdown": "^7.0.1",
     "react-quill": "^2.0.0-beta.4",
     "react-redux": "^7.2.5",

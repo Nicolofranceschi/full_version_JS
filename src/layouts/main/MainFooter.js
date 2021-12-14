@@ -15,26 +15,21 @@ import Logo from '../../components/Logo';
 
 // ----------------------------------------------------------------------
 
-const SOCIALS = [
-  { name: 'FaceBook', icon: facebookFill },
-  { name: 'Google', icon: googleFill },
-  { name: 'Linkedin', icon: linkedinFill },
-  { name: 'Twitter', icon: twitterFill }
-];
+const SOCIALS = [];
 
 const LINKS = [
   {
     headline: 'Minimal',
     children: [
-      { name: 'About us', href: PATH_PAGE.about },
-      { name: 'Contact us', href: PATH_PAGE.contact }
+      { name: 'Storia', href: PATH_PAGE.about },
+      { name: 'Contatti', href: PATH_PAGE.contact }
     ]
   },
   {
     headline: 'Legal',
     children: [
-      { name: 'Terms and Condition', href: '#' },
-      { name: 'Privacy Policy', href: '#' }
+      { name: 'Termini e condizioni', href: '#' },
+      { name: 'Poliza sulla privacy', href: '#' }
     ]
   },
   {
@@ -42,7 +37,8 @@ const LINKS = [
     children: [
       { name: 'E-mail: gfstrade.amministrazione@hotmail.it', href: 'mailto:gfstrade.amministrazione@hotmail.it' },
       { name: 'PEC: gfstrade@legalmail.it', href: 'mailto:gfstrade@legalmail.it' },
-      { name: 'tel  +39 6908263 fax +39 2872617', href: 'tel:+396908263' }
+      { name: 'tel  +39 6908263', href: 'tel:+396908263' },
+      { name: 'fax +39 2872617', href: '#' }
     ]
   }
 ];

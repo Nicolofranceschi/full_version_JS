@@ -2,7 +2,7 @@ import { paramCase } from 'change-case';
 
 // ----------------------------------------------------------------------
 
-export const FOUNDATION_LIST = ['SOA', 'ISO 14001', 'ISO 450010', 'Rating legalità', 'Whitelist', 'ISO 9001'].map(
+export const FOUNDATION_LIST = ['SOA', 'ISO 14001', 'ISO 450010', 'Rating legalita', 'Whitelist', 'ISO 9001'].map(
   (item) => ({
     name: item,
     href: `/cert/${item}.pdf`,

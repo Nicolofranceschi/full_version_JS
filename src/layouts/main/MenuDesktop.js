@@ -7,7 +7,7 @@ import arrowIosUpwardFill from '@iconify/icons-eva/arrow-ios-upward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 // material
 import { styled } from '@mui/material/styles';
-import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardActionArea } from '@mui/material';
+import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardActionArea, Button } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -245,7 +245,7 @@ export default function MenuDesktop({ isOffset, isHome, navConfig }) {
   };
 
   return (
-    <Stack direction="row">
+    <Stack direction="row" alignItems="center">
       {navConfig.map((link) => (
         <MenuDesktopItem
           key={link.title}
@@ -257,6 +257,9 @@ export default function MenuDesktop({ isOffset, isHome, navConfig }) {
           isHome={isHome}
         />
       ))}
+      <Button variant="contained" href="https://workingbotgfstrade.vercel.app/" target="_blank">
+        WORKINGBOT
+      </Button>
     </Stack>
   );
 }
